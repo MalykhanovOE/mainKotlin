@@ -36,3 +36,18 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+# IntelliJ IDEA files
+.idea/
+*.iml
+
+# Build files
+out/
+build/
+
+# Maven specific
+target/
+pom.xml.versionsBackup
+
+# Logs
+*.log
