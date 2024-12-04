@@ -29,6 +29,15 @@ p2.children.add(ch3)
     for (child in p3.children){
         println(child.firsName)
     }
+
+    var r = Rectangle (1.7, 5.8)
+    println(r.perimetr)
+    r.test = -7 // примеры использования геттеров и сеттеров в котлин
+    r.test = 7
+     println(r.test)
+    r.test = 0
+    println(r.test)
+    r.test = -1
 }
 
 class Person (var firsName: String, var lastName: String, var age: Int) // первичный конструктор
@@ -49,3 +58,18 @@ children.add(child) //добавляем ребенка в конструкто�
 
 
 }
+class Rectangle (var heinght: Double, var lenght: Double){
+    var perimetr = (heinght + lenght) * 2
+
+     var  test = 1
+        get() = field + 1 // это геттер в котлин, field аналогично this в java ( в данном случае field обращается к полю test)
+        set(value) {   //это сеттер в котлин, тут field опять обращается в test, но уже с обновленным значением условия сеттера
+            field = value
+            if (value < 0)  {println("Негативное значение")
+            }
+else {field = value }
+
+        }
+
+}
+
